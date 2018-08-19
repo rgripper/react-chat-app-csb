@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body,
+* {
+  font-family: "Open Sans";
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.debug {
+  font-size: 0.875rem;
+  opacity: 0.5;
+
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+
+  display: none;
+}
+
+.chat-content {
+  display: flex;
+  overflow: hidden;
+}
+
+.chat-content > :first-child {
+  flex: 1;
+}
+
+.chat-content > :last-child {
+  flex: 3;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+form > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.message-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem;
+  overflow-y: auto;
+}
+
+.message-list > li {
+  display: block;
+  margin: 1rem;
+  position: relative;
+}
+
+.message-list > li > img {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  margin-right: 0.5rem;
+  object-fit: contain;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.message-list > li > span {
+  display: inline-block;
+  background-color: #d1d1d1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.user-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem 0 0;
+  overflow-y: auto;
+}
+
+.user-list > li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.user-list > .disconnected {
+  opacity: 0.35;
+}
+
+.user-list > li > img {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+
+button {
+  background-color: rgb(112, 114, 223);
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: 0.0625rem solid #d1d1d1;
+  display: inline-block;
+}
+
+.app {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app > .chat-content {
+  flex: 1;
+}
